@@ -1099,7 +1099,7 @@ exports.handler = function(event, context) {
 					inputInfo.inputFilename = keyComponents[keyComponents.length - 1];
 
 					// remove the filename from the prefix value
-					var searchKey = inputInfo.key.replace(inputInfo.inputFilename, '').replace(/\/$/, '');
+					var searchKey = keyComponents[0];
 
 					// if the event didn't have a prefix, and is just in the
 					// bucket, then just use the bucket name, otherwise add the
